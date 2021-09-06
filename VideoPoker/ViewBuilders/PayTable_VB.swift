@@ -19,11 +19,11 @@ struct PayTable<Content: View>: View
     
     var body: some View
     {
-        // build your custom view builder here
-        HStack (alignment: .center, spacing: -10.0)
+        // Pay Table
+        HStack (alignment: .center)
         {
             // winning hands
-            VStack (spacing: 10)
+            VStack (alignment: .leading)
             {
                 Text("ROYAL FLUSH")
                 Text("STRAIGHT FLUSH")
@@ -35,12 +35,11 @@ struct PayTable<Content: View>: View
                 Text("TWO PAIR")
                 Text("JACKS OR BETTER")
             }
-            .padding(.all)
-            .frame(width: 200.00,
-                   height: .infinity,
-                   alignment: .leading)
-            // X 1
-            VStack (spacing: 10)
+            .padding(.trailing, 10.0)
+            .scaledToFill()
+            .border(Color.white, width: 2)
+            // x1
+            VStack (alignment: .center)
             {
                 Text("250")
                 Text("50")
@@ -52,12 +51,9 @@ struct PayTable<Content: View>: View
                 Text("2")
                 Text("1")
             }
-            .padding(.all)
-            .frame(width: 70.0,
-                   height: .infinity,
-                   alignment: .trailing)
-            // X 2
-            VStack (spacing: 10)
+            .scaledToFill()
+            // x2
+            VStack (alignment: .center)
             {
                 Text("500")
                 Text("100")
@@ -69,13 +65,9 @@ struct PayTable<Content: View>: View
                 Text("4")
                 Text("2")
             }
-            .padding(.all)
-            .frame(width: 70.0,
-                   height: .infinity,
-                   alignment: .trailing)
-            
-            // X 3
-            VStack (spacing: 10)
+            .scaledToFill()
+            // x3
+            VStack (alignment: .center)
             {
                 Text("750")
                 Text("150")
@@ -87,12 +79,9 @@ struct PayTable<Content: View>: View
                 Text("6")
                 Text("3")
             }
-            .padding(.all)
-            .frame(width: 70.0,
-                   height: .infinity,
-                   alignment: .trailing)
-            // X 4
-            VStack (spacing: 10)
+            .scaledToFill()
+            // x4
+            VStack (alignment: .center)
             {
                 Text("1000")
                 Text("200")
@@ -104,12 +93,9 @@ struct PayTable<Content: View>: View
                 Text("8")
                 Text("4")
             }
-            .padding(.all)
-            .frame(width: 90.0,
-                   height: .infinity,
-                   alignment: .trailing)
-            // X 5
-            VStack (spacing: 10)
+            .scaledToFill()
+            // x5
+            VStack (alignment: .center)
             {
                 Text("4000")
                 Text("250")
@@ -121,11 +107,11 @@ struct PayTable<Content: View>: View
                 Text("10")
                 Text("5")
             }
-            .padding(.all)
-            .frame(width: 90.0,
-                   height: .infinity,
-                   alignment: .trailing)
+            .padding(.trailing, 20.0)
+            .scaledToFill()
         }
-        .frame(width: .infinity)
+        .border(Color.white, width: 2)
+        .padding(.all)
+        .frame(height: 200.0)
     }
 }

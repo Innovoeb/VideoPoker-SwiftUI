@@ -9,21 +9,27 @@ import SwiftUI
 
 struct JacksOrBetter_V: View
 {
+    //@ObservedObject var dealer = Dealer()
+    //@StateObject var dealer = Dealer()
+    
+    init()
+    {
+//        dealer.newGame()
+//        print(dealer.slot1)
+    }
+    
     var body: some View
     {
+        // main container
         VStack
         {
             PayTable{}
-                //.padding()
-//                .frame(height: .infinity)
-                .border(Color.white, width: 2)
             Spacer()
             CardGrid{}
+                //.environmentObject(dealer)
+            MoneyRow{}
+            Buttons{}
         }
-        // redundant ???
-        .frame(width: .infinity,
-               height: .infinity)
-        
     }
 }
 

@@ -11,36 +11,44 @@ struct CardGrid<Content: View>: View
 {
     // let content denotes that it will conform to the View protocol
     let content: Content // add content as a prop and initialize it
-        // @ViewBuilder as a param to allow closures to provide multiple child views
-        init(@ViewBuilder content: () -> Content)
-        {
-            self.content = content()
-        }
-
+    @ObservedObject var dealer = Dealer()
+    //@ObservedObject var dealer: Dealer
+    //@EnvironmentObject var dealer: Dealer
+    //@StateObject var dealer = Dealer()
+    
+    
+    // @ViewBuilder as a param to allow closures to provide multiple child views
+    init(@ViewBuilder content: () -> Content)
+    {
+        self.content = content()
+        //self.dealer = Dealer()
+        print(dealer.slot1)
+    }
+    
     var body: some View
     {
         HStack
         {
-            //Text("test")
-            Image("10_of_spades")
+            Image(dealer.slot1)
                 .resizable()
-                .scaledToFill()
-            Image("jack_of_spades2")
+                .scaledToFit()
+            Image(dealer.slot2)
                 .resizable()
-                .scaledToFill()
-            Image("queen_of_spades2")
+                .scaledToFit()
+            Image(dealer.slot3)
                 .resizable()
-                .scaledToFill()
-            Image("king_of_spades2")
+                .scaledToFit()
+            Image(dealer.slot4)
                 .resizable()
-                .scaledToFill()
-            Image("ace_of_spades2")
+                .scaledToFit()
+            Image(dealer.slot5)
                 .resizable()
-                .scaledToFill()
+                .scaledToFit()
         }
-        .border(Color.green, width: 3)
-        .frame(width: 350.0,
+        .border(Color.green, width: 2)
+        .frame(width: .infinity,
                height: 175.0)
+        //.environmentObject(dealer)
     }
 }
     
