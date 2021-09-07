@@ -7,16 +7,8 @@
 
 import SwiftUI
 
-struct PayTable<Content: View>: View
+struct PayTable: View
 {
-    // let content denotes that it will conform to the View protocol
-    let content: Content // add content as a prop and initialize it
-        // @ViewBuilder as a param to allow closures to provide multiple child views
-        init(@ViewBuilder content: () -> Content)
-        {
-            self.content = content()
-        }
-    
     var body: some View
     {
         // Pay Table
@@ -112,6 +104,6 @@ struct PayTable<Content: View>: View
         }
         .border(Color.white, width: 2)
         .padding(.all)
-        .frame(height: 200.0)
+        .frame(width: 400.0, height: 200.0)
     }
 }

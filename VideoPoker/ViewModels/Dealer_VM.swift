@@ -10,18 +10,6 @@ import Foundation
 class Dealer: ObservableObject
 {
     @Published var cards = [Card]()
-//    @Published var slot1:String!
-//    @Published var slot2:String!
-//    @Published var slot3:String!
-//    @Published var slot4:String!
-//    @Published var slot5:String!
-    
-//    @Published var slot1:String?
-//    @Published var slot2:String?
-//    @Published var slot3:String?
-//    @Published var slot4:String?
-//    @Published var slot5:String?
-    
     @Published var slot1 = ""
     @Published var slot2 = ""
     @Published var slot3 = ""
@@ -33,6 +21,7 @@ class Dealer: ObservableObject
     {
         // create an instance of data service and get the data
         self.cards = DataService.getLocalData()
+        // show spades royal flush before a game is started/first spin
         slot1 = cards[9].image
         slot2 = cards[10].image
         slot3 = cards[11].image
@@ -40,16 +29,7 @@ class Dealer: ObservableObject
         slot5 = cards[0].image
     }
     
-//    func newGame ()
-//    {
-//        slot1 = cards[9].image
-//        slot2 = cards[10].image
-//        slot3 = cards[11].image
-//        slot4 = cards[12].image
-//        slot5 = cards[0].image
-//    }
-    
-    func checkIfRandom ()
+    func RNG ()
     {
         let shuffleCard = cards.randomElement()!.image
         
@@ -155,14 +135,13 @@ class Dealer: ObservableObject
         slot4 = cards.randomElement()!.image
         slot5 = cards.randomElement()!.image
         
-        checkIfRandom()
-        
-        print(slot1)
-        print(slot2)
-        print(slot3)
-        print(slot4)
-        print(slot5)
+        RNG()
     }
+    
+    
+    
+    
+    
     
     
     // other game stuff

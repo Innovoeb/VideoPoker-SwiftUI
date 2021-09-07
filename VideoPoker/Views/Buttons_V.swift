@@ -7,18 +7,9 @@
 
 import SwiftUI
 
-struct Buttons<Content: View>: View
+struct Buttons: View
 {
-    let content: Content
-    
-    @ObservedObject var dealer = Dealer()
-    //@StateObject var dealer = Dealer()
-    //@EnvironmentObject var dealer: Dealer
-    
-    init(@ViewBuilder content: () -> Content)
-    {
-        self.content = content()
-    }
+    @ObservedObject var dealer: Dealer
     
     var body: some View
     {
@@ -41,7 +32,7 @@ struct Buttons<Content: View>: View
             // deal button
             Button("DEAL")
             {
-                // MARK: Testing if JSON Was Parsed Correctly
+//                // MARK: Testing if JSON Was Parsed Correctly
 //                for i in dealer.cards
 //                {
 //                    print(i.name)
@@ -49,9 +40,7 @@ struct Buttons<Content: View>: View
                 dealer.deal()
             }
             .frame(alignment: .trailing)
-            //.environmentObject(dealer)
         }
-        .frame(width: .infinity,
-        height: 50.0)
+        .frame(width: 350.0, height: 50.0)
     }
 }

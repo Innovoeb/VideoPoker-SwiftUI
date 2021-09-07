@@ -7,15 +7,8 @@
 
 import SwiftUI
 
-struct MoneyRow<Content: View>: View
+struct MoneyRow: View
 {
-    let content: Content
-    
-    init(@ViewBuilder content: () -> Content)
-    {
-        self.content = content()
-    }
-    
     var body: some View
     {
         HStack (alignment: .center)
@@ -29,7 +22,6 @@ struct MoneyRow<Content: View>: View
             Text("CREDIT $4000")
                 .frame(alignment: .trailing)
         }
-        .frame(width: .infinity,
-               height: 50.0)
+        .frame(width: 370.0, height: 50.0)
     }
 }
