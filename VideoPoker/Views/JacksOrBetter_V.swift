@@ -18,8 +18,11 @@ struct JacksOrBetter_V: View
         {
             PayTable()
             Spacer()
+            Spacer()
             CardGrid(dealer: dealer)
-            MoneyRow()
+            Winner(dealer: dealer)
+            Spacer()
+            MoneyRow(dealer: dealer)
             Buttons(dealer: dealer)
         }
     }

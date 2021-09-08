@@ -30,14 +30,10 @@ struct Buttons: View
             }
             Spacer()
             // deal button
-            Button("DEAL")
+            Button(dealer.dealButton)
             {
-//                // MARK: Testing if JSON Was Parsed Correctly
-//                for i in dealer.cards
-//                {
-//                    print(i.name)
-//                }
                 dealer.deal()
+                dealer.payout()
             }
             .frame(alignment: .trailing)
         }

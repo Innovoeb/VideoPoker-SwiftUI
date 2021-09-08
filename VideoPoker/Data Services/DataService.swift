@@ -33,13 +33,13 @@ class DataService: Decodable
                 
             // decode the data with a JSON decoder
             let decoder = JSONDecoder()
-                
+            
             do
             {
                 // decode the json data into instances of Card
                 let cardData = try
                     decoder.decode([Card].self, from: data)
-                    
+                
                 // set unique IDs for each instance
                 for i in 0..<cardData.count
                 {

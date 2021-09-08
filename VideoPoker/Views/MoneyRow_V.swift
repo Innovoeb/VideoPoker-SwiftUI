@@ -9,6 +9,9 @@ import SwiftUI
 
 struct MoneyRow: View
 {
+    @ObservedObject var dealer: Dealer
+    
+    
     var body: some View
     {
         HStack (alignment: .center)
@@ -19,7 +22,7 @@ struct MoneyRow: View
             Text("BET 5")
                 .frame(alignment: .center)
             Spacer()
-            Text("CREDIT $4000")
+            Text(dealer.credits)
                 .frame(alignment: .trailing)
         }
         .frame(width: 370.0, height: 50.0)

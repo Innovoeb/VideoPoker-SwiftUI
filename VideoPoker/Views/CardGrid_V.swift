@@ -15,27 +15,92 @@ struct CardGrid: View
     {
         HStack
         {
-            Image(dealer.slot1)
-                .resizable()
-                .scaledToFit()
-                .onTapGesture
+            VStack
+            {
+                if (dealer.slot1Held == true || dealer.gameInit == false)
                 {
-                    print("card was tapped")
+                    Text("HELD")
                 }
-            Image(dealer.slot2)
-                .resizable()
-                .scaledToFit()
-            Image(dealer.slot3)
-                .resizable()
-                .scaledToFit()
-            Image(dealer.slot4)
-                .resizable()
-                .scaledToFit()
-            Image(dealer.slot5)
-                .resizable()
-                .scaledToFit()
+                Image(dealer.slot1)
+                    .resizable()
+                    .scaledToFit()
+                    .onTapGesture
+                    {
+                        if (dealer.gameInit == true && dealer.firstDeal == true)
+                        {
+                            dealer.slot1Held = true
+                        }
+                    }
+            }
+            VStack
+            {
+                if (dealer.slot2Held == true || dealer.gameInit == false)
+                {
+                    Text("HELD")
+                }
+                Image(dealer.slot2)
+                    .resizable()
+                    .scaledToFit()
+                    .onTapGesture
+                    {
+                        if (dealer.gameInit == true && dealer.firstDeal == true)
+                        {
+                            dealer.slot2Held = true
+                        }
+                    }
+            }
+            VStack
+            {
+                if (dealer.slot3Held == true || dealer.gameInit == false)
+                {
+                    Text("HELD")
+                }
+                Image(dealer.slot3)
+                    .resizable()
+                    .scaledToFit()
+                    .onTapGesture
+                    {
+                        if (dealer.gameInit == true && dealer.firstDeal == true)
+                        {
+                            dealer.slot3Held = true
+                        }
+                    }
+            }
+            VStack
+            {
+                if (dealer.slot4Held == true || dealer.gameInit == false)
+                {
+                    Text("HELD")
+                }
+                Image(dealer.slot4)
+                    .resizable()
+                    .scaledToFit()
+                    .onTapGesture
+                    {
+                        if (dealer.gameInit == true && dealer.firstDeal == true)
+                        {
+                            dealer.slot4Held = true
+                        }
+                    }
+            }
+            VStack
+            {
+                if (dealer.slot5Held == true || dealer.gameInit == false)
+                {
+                    Text("HELD")
+                }
+                Image(dealer.slot5)
+                    .resizable()
+                    .scaledToFit()
+                    .onTapGesture
+                    {
+                        if (dealer.gameInit == true && dealer.firstDeal == true)
+                        {
+                            dealer.slot5Held = true
+                        }
+                    }
+            }
         }
-        .border(Color.green, width: 2)
         .frame(width: 360.0, height: 300.0)
     }
 }
