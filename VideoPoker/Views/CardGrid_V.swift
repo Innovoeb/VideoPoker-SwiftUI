@@ -17,7 +17,7 @@ struct CardGrid: View
         {
             VStack
             {
-                if (dealer.slot1Held == true || dealer.gameInit == false)
+                if ( (dealer.gameInit == false) || (dealer.slot1Held == true) )
                 {
                     Text("HELD")
                 }
@@ -26,15 +26,22 @@ struct CardGrid: View
                     .scaledToFit()
                     .onTapGesture
                     {
-                        if (dealer.gameInit == true && dealer.firstDeal == true)
+                        if (dealer.gameInit == true && dealer.firstDeal == false) // after RNG I change the deal status
                         {
-                            dealer.slot1Held = true
+                            if (dealer.slot1Held == false)
+                            {
+                                dealer.slot1Held = true
+                            }
+                            else
+                            {
+                                dealer.slot1Held = false
+                            }
                         }
                     }
             }
             VStack
             {
-                if (dealer.slot2Held == true || dealer.gameInit == false)
+                if ( (dealer.gameInit == false) || (dealer.slot2Held == true) )
                 {
                     Text("HELD")
                 }
@@ -43,15 +50,22 @@ struct CardGrid: View
                     .scaledToFit()
                     .onTapGesture
                     {
-                        if (dealer.gameInit == true && dealer.firstDeal == true)
+                        if (dealer.gameInit == true && dealer.firstDeal == false) // after RNG I change the deal status
                         {
-                            dealer.slot2Held = true
+                            if (dealer.slot2Held == false)
+                            {
+                                dealer.slot2Held = true
+                            }
+                            else
+                            {
+                                dealer.slot2Held = false
+                            }
                         }
                     }
             }
             VStack
             {
-                if (dealer.slot3Held == true || dealer.gameInit == false)
+                if ( (dealer.gameInit == false) || (dealer.slot3Held == true) )
                 {
                     Text("HELD")
                 }
@@ -60,15 +74,22 @@ struct CardGrid: View
                     .scaledToFit()
                     .onTapGesture
                     {
-                        if (dealer.gameInit == true && dealer.firstDeal == true)
+                        if (dealer.gameInit == true && dealer.firstDeal == false) // after RNG I change the deal status
                         {
-                            dealer.slot3Held = true
+                            if (dealer.slot3Held == false)
+                            {
+                                dealer.slot3Held = true
+                            }
+                            else
+                            {
+                                dealer.slot3Held = false
+                            }
                         }
                     }
             }
             VStack
             {
-                if (dealer.slot4Held == true || dealer.gameInit == false)
+                if ( (dealer.gameInit == false) || (dealer.slot4Held == true) )
                 {
                     Text("HELD")
                 }
@@ -77,15 +98,22 @@ struct CardGrid: View
                     .scaledToFit()
                     .onTapGesture
                     {
-                        if (dealer.gameInit == true && dealer.firstDeal == true)
+                        if (dealer.gameInit == true && dealer.firstDeal == false) // after RNG I change the deal status
                         {
-                            dealer.slot4Held = true
+                            if (dealer.slot4Held == false)
+                            {
+                                dealer.slot4Held = true
+                            }
+                            else
+                            {
+                                dealer.slot4Held = false
+                            }
                         }
                     }
             }
             VStack
             {
-                if (dealer.slot5Held == true || dealer.gameInit == false)
+                if ( (dealer.gameInit == false) || (dealer.slot5Held == true) )
                 {
                     Text("HELD")
                 }
@@ -94,9 +122,16 @@ struct CardGrid: View
                     .scaledToFit()
                     .onTapGesture
                     {
-                        if (dealer.gameInit == true && dealer.firstDeal == true)
+                        if (dealer.gameInit == true && dealer.firstDeal == false) // after RNG I change the deal status
                         {
-                            dealer.slot5Held = true
+                            if (dealer.slot5Held == false)
+                            {
+                                dealer.slot5Held = true
+                            }
+                            else
+                            {
+                                dealer.slot5Held = false
+                            }
                         }
                     }
             }

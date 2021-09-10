@@ -16,13 +16,30 @@ struct MoneyRow: View
     {
         HStack (alignment: .center)
         {
-            Text("WIN 4000")
-                .frame(alignment: .leading)
+            if (dealer.gameInit == false)
+            {
+                Text("WIN 4000")
+                    .frame(alignment: .leading)
+            }
+            else
+            {
+                if (dealer.playerWonHand == true)
+                {
+                    Text("WIN \(dealer.winnings)")
+                        .frame(alignment: .leading)
+                }
+                else
+                {
+                    Text("")
+                        .frame(alignment: .leading)
+                }
+            }
+            
             Spacer()
             Text("BET 5")
                 .frame(alignment: .center)
             Spacer()
-            Text(dealer.credits)
+            Text("CREDIT \(dealer.credits)")
                 .frame(alignment: .trailing)
         }
         .frame(width: 370.0, height: 50.0)
