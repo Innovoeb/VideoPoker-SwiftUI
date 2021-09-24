@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CardGrid: View
 {
-    @ObservedObject var dealer: Dealer
+    @EnvironmentObject var dealer: Dealer
     
     var body: some View
     {

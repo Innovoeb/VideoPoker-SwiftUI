@@ -103,9 +103,14 @@ class Dealer: ObservableObject
                 slot3 = cards.randomElement()!.image
             }
             
-            while ( (slot5 == slot1) || (slot5 == slot2) || (slot5 == slot3) || (slot5 == slot4) )
+            while ( (slot4 == slot1) || (slot4 == slot2) || (slot4 == slot3) || (slot4 == slot5) )
             {
                 slot4 = cards.randomElement()!.image
+            }
+            
+            while ( (slot5 == slot1) || (slot5 == slot2) || (slot5 == slot3) || (slot5 == slot4) )
+            {
+                slot5 = cards.randomElement()!.image
             }
         }
         // second deal

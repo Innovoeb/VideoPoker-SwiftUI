@@ -13,6 +13,7 @@ struct VideoPokerApp: App {
     var body: some Scene {
         WindowGroup {
             JacksOrBetter_V()
+                .environmentObject(Dealer())
         }
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct JacksOrBetter_V: View
 {
-    @ObservedObject var dealer = Dealer()
+    @EnvironmentObject var dealer: Dealer
     
     var body: some View
     {
@@ -19,7 +19,7 @@ struct JacksOrBetter_V: View
             PayTable()
             Spacer()
             Spacer()
-            CardGrid(dealer: dealer)
+            CardGrid()
             Winner(dealer: dealer)
             Spacer()
             MoneyRow(dealer: dealer)
