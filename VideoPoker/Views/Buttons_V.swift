@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Buttons: View
 {
-    @ObservedObject var dealer: Dealer
+    @EnvironmentObject var dealer: Dealer
     
     var body: some View
     {

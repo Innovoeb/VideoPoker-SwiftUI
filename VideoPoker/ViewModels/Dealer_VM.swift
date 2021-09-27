@@ -254,6 +254,7 @@ class Dealer: ObservableObject
         var highPair = false
         var set = false
         var straight = false
+        var straightToTheAce = false
         var flush = false
         var fullhouse = false
         var fourKind = false
@@ -306,7 +307,7 @@ class Dealer: ObservableObject
         if (firstDeal == true && (value1 == 2 && value2 == 2) || (value1 == 2 && value3 == 2) || (value1 == 2 && value4 == 2) || (value1 == 2 && value5 == 2) || (value2 == 2 && value3 == 2) || (value2 == 2 && value4 == 2) || (value2 == 2 && value5 == 2) || (value3 == 2 && value4 == 2) || (value3 == 2 && value5 == 2) || (value4 == 2 && value5 == 2))
         {
             pairs += 1
-            lowPair = true
+            //lowPair = true
         }
         if (firstDeal == true && (value1 == 2 && value2 == 2 && value3 == 2) || (value2 == 2 && value3 == 2 && value4 == 2) || (value3 == 2 && value4 == 2 && value5 == 2) || (value1 == 2 && value3 == 2 && value4 == 2) || (value1 == 2 && value4 == 2 && value5 == 2) || (value2 == 2 && value4 == 2 && value5 == 2) || (value1 == 2 && value3 == 2 && value5 == 2) || (value2 == 2 && value3 == 2 && value5 == 2) || (value1 == 2 && value2 == 2 && value5 == 2) || (value1 == 2 && value2 == 2 && value4 == 2))
         {
@@ -317,7 +318,7 @@ class Dealer: ObservableObject
         if (firstDeal == true && (value1 == 3 && value2 == 3) || (value1 == 3 && value3 == 3) || (value1 == 3 && value4 == 3) || (value1 == 3 && value5 == 3) || (value2 == 3 && value3 == 3) || (value2 == 3 && value4 == 3) || (value2 == 3 && value5 == 3) || (value3 == 3 && value4 == 3) || (value3 == 3 && value5 == 3) || (value4 == 3 && value5 == 3))
         {
             pairs += 1
-            lowPair = true
+            //lowPair = true
         }
         if (firstDeal == true && (value1 == 3 && value2 == 3 && value3 == 3) || (value2 == 3 && value3 == 3 && value4 == 3) || (value3 == 3 && value4 == 3 && value5 == 3) || (value1 == 3 && value3 == 3 && value4 == 3) || (value1 == 3 && value4 == 3 && value5 == 3) || (value2 == 3 && value4 == 3 && value5 == 3) || (value1 == 3 && value3 == 3 && value5 == 3) || (value2 == 3 && value3 == 3 && value5 == 3) || (value1 == 3 && value2 == 3 && value5 == 3) || (value1 == 3 && value2 == 3 && value4 == 3))
         {
@@ -328,7 +329,7 @@ class Dealer: ObservableObject
         if (firstDeal == true && (value1 == 4 && value2 == 4) || (value1 == 4 && value3 == 4) || (value1 == 4 && value4 == 4) || (value1 == 4 && value5 == 4) || (value2 == 4 && value3 == 4) || (value2 == 4 && value4 == 4) || (value2 == 4 && value5 == 4) || (value3 == 4 && value4 == 4) || (value3 == 4 && value5 == 4) || (value4 == 4 && value5 == 4))
         {
             pairs += 1
-            lowPair = true
+            //lowPair = true
         }
         if (firstDeal == true && (value1 == 4 && value2 == 4 && value3 == 4) || (value2 == 4 && value3 == 4 && value4 == 4) || (value3 == 4 && value4 == 4 && value5 == 4) || (value1 == 4 && value3 == 4 && value4 == 4) || (value1 == 4 && value4 == 4 && value5 == 4) || (value2 == 4 && value4 == 4 && value5 == 4) || (value1 == 4 && value3 == 4 && value5 == 4) || (value2 == 4 && value3 == 4 && value5 == 4) || (value1 == 4 && value2 == 4 && value5 == 4) || (value1 == 4 && value2 == 4 && value4 == 4))
         {
@@ -339,7 +340,7 @@ class Dealer: ObservableObject
         if (firstDeal == true && (value1 == 5 && value2 == 5) || (value1 == 5 && value3 == 5) || (value1 == 5 && value4 == 5) || (value1 == 5 && value5 == 5) || (value2 == 5 && value3 == 5) || (value2 == 5 && value4 == 5) || (value2 == 5 && value5 == 5) || (value3 == 5 && value4 == 5) || (value3 == 5 && value5 == 5) || (value4 == 5 && value5 == 5))
         {
             pairs += 1
-            lowPair = true
+            //lowPair = true
         }
         if (firstDeal == true && (value1 == 5 && value2 == 5 && value3 == 5) || (value2 == 5 && value3 == 5 && value4 == 5) || (value3 == 5 && value4 == 5 && value5 == 5) || (value1 == 5 && value3 == 5 && value4 == 5) || (value1 == 5 && value4 == 5 && value5 == 5) || (value2 == 5 && value4 == 5 && value5 == 5) || (value1 == 5 && value3 == 5 && value5 == 5) || (value2 == 5 && value3 == 5 && value5 == 5) || (value1 == 5 && value2 == 5 && value5 == 5) || (value1 == 5 && value2 == 5 && value4 == 5))
         {
@@ -350,7 +351,7 @@ class Dealer: ObservableObject
         if (firstDeal == true && (value1 == 6 && value2 == 6) || (value1 == 6 && value3 == 6) || (value1 == 6 && value4 == 6) || (value1 == 6 && value5 == 6) || (value2 == 6 && value3 == 6) || (value2 == 6 && value4 == 6) || (value2 == 6 && value5 == 6) || (value3 == 6 && value4 == 6) || (value3 == 6 && value5 == 6) || (value4 == 6 && value5 == 6))
         {
             pairs += 1
-            lowPair = true
+            //lowPair = true
         }
         if (firstDeal == true && (value1 == 6 && value2 == 6 && value3 == 6) || (value2 == 6 && value3 == 6 && value4 == 6) || (value3 == 6 && value4 == 6 && value5 == 6) || (value1 == 6 && value3 == 6 && value4 == 6) || (value1 == 6 && value4 == 6 && value5 == 6) || (value2 == 6 && value4 == 6 && value5 == 6) || (value1 == 6 && value3 == 6 && value5 == 6) || (value2 == 6 && value3 == 6 && value5 == 6) || (value1 == 6 && value2 == 6 && value5 == 6) || (value1 == 6 && value2 == 6 && value4 == 6))
         {
@@ -361,7 +362,7 @@ class Dealer: ObservableObject
         if (firstDeal == true && (value1 == 7 && value2 == 7) || (value1 == 7 && value3 == 7) || (value1 == 7 && value4 == 7) || (value1 == 7 && value5 == 7) || (value2 == 7 && value3 == 7) || (value2 == 7 && value4 == 7) || (value2 == 7 && value5 == 7) || (value3 == 7 && value4 == 7) || (value3 == 7 && value5 == 7) || (value4 == 7 && value5 == 7))
         {
             pairs += 1
-            lowPair = true
+            //lowPair = true
         }
         if (firstDeal == true && (value1 == 7 && value2 == 7 && value3 == 7) || (value2 == 7 && value3 == 7 && value4 == 7) || (value3 == 7 && value4 == 7 && value5 == 7) || (value1 == 7 && value3 == 7 && value4 == 7) || (value1 == 7 && value4 == 7 && value5 == 7) || (value2 == 7 && value4 == 7 && value5 == 7) || (value1 == 7 && value3 == 7 && value5 == 7) || (value2 == 7 && value3 == 7 && value5 == 7) || (value1 == 7 && value2 == 7 && value5 == 7) || (value1 == 7 && value2 == 7 && value4 == 7))
         {
@@ -372,7 +373,7 @@ class Dealer: ObservableObject
         if (firstDeal == true && (value1 == 8 && value2 == 8) || (value1 == 8 && value3 == 8) || (value1 == 8 && value4 == 8) || (value1 == 8 && value5 == 8) || (value2 == 8 && value3 == 8) || (value2 == 8 && value4 == 8) || (value2 == 8 && value5 == 8) || (value3 == 8 && value4 == 8) || (value3 == 8 && value5 == 8) || (value4 == 8 && value5 == 8))
         {
             pairs += 1
-            lowPair = true
+            //lowPair = true
         }
         if (firstDeal == true && (value1 == 8 && value2 == 8 && value3 == 8) || (value2 == 8 && value3 == 8 && value4 == 8) || (value3 == 8 && value4 == 8 && value5 == 8) || (value1 == 8 && value3 == 8 && value4 == 8) || (value1 == 8 && value4 == 8 && value5 == 8) || (value2 == 8 && value4 == 8 && value5 == 8) || (value1 == 8 && value3 == 8 && value5 == 8) || (value2 == 8 && value3 == 8 && value5 == 8) || (value1 == 8 && value2 == 8 && value5 == 8) || (value1 == 8 && value2 == 8 && value4 == 8))
         {
@@ -383,7 +384,7 @@ class Dealer: ObservableObject
         if (firstDeal == true && (value1 == 9 && value2 == 9) || (value1 == 9 && value3 == 9) || (value1 == 9 && value4 == 9) || (value1 == 9 && value5 == 9) || (value2 == 9 && value3 == 9) || (value2 == 9 && value4 == 9) || (value2 == 9 && value5 == 9) || (value3 == 9 && value4 == 9) || (value3 == 9 && value5 == 9) || (value4 == 9 && value5 == 9))
         {
             pairs += 1
-            lowPair = true
+            //lowPair = true
         }
         if (firstDeal == true && (value1 == 9 && value2 == 9 && value3 == 9) || (value2 == 9 && value3 == 9 && value4 == 9) || (value3 == 9 && value4 == 9 && value5 == 9) || (value1 == 9 && value3 == 9 && value4 == 9) || (value1 == 9 && value4 == 9 && value5 == 9) || (value2 == 9 && value4 == 9 && value5 == 9) || (value1 == 9 && value3 == 9 && value5 == 9) || (value2 == 9 && value3 == 9 && value5 == 9) || (value1 == 9 && value2 == 9 && value5 == 9) || (value1 == 9 && value2 == 9 && value4 == 9))
         {
@@ -394,7 +395,7 @@ class Dealer: ObservableObject
         if (firstDeal == true && (value1 == 10 && value2 == 10) || (value1 == 10 && value3 == 10) || (value1 == 10 && value4 == 10) || (value1 == 10 && value5 == 10) || (value2 == 10 && value3 == 10) || (value2 == 10 && value4 == 10) || (value2 == 10 && value5 == 10) || (value3 == 10 && value4 == 10) || (value3 == 10 && value5 == 10) || (value4 == 10 && value5 == 10))
         {
             pairs += 1
-            lowPair = true
+            //lowPair = true
         }
         if (firstDeal == true && (value1 == 10 && value2 == 10 && value3 == 10) || (value2 == 10 && value3 == 10 && value4 == 10) || (value3 == 10 && value4 == 10 && value5 == 10) || (value1 == 10 && value3 == 10 && value4 == 10) || (value1 == 10 && value4 == 10 && value5 == 10) || (value2 == 10 && value4 == 10 && value5 == 10) || (value1 == 10 && value3 == 10 && value5 == 10) || (value2 == 10 && value3 == 10 && value5 == 10) || (value1 == 10 && value2 == 10 && value5 == 10) || (value1 == 10 && value2 == 10 && value4 == 10))
         {
@@ -449,8 +450,7 @@ class Dealer: ObservableObject
             set = true
         }
         
-        // MARK: Straight/Straight Flush
-        
+        // MARK: Straight/Straight Flush/Royal Flush
         array.append(value1)
         array.append(value2)
         array.append(value3)
@@ -460,137 +460,149 @@ class Dealer: ObservableObject
         // find the highest and lowest valued elements and store in a var
         min = array.min()!
         max = array.max()!
-        var aces = 0
         
         // check for straight to the ace
-        for i in array
+        if ( array.contains(1) && array.contains(10) && array.contains(11) && array.contains(12) && array.contains(13) )
         {
-            if (i == 1)
-            {
-                print("ace detected")
-                aces += 1
-            }
+            straightToTheAce = true
+            straight = false
+            pairs = 0
+            highPair = false
+            set = false
         }
         
-        if (aces == 1)
-        {
-            aces = 14
-            if ( (aces - min == 4) && pairs == 0)
-            {
-                straight = true
-                pairs = 0
-                set = false
-                flush = false
-                fourKind = false
-            }
-        }
-        
-        // regular straigh
-        if ( (max - min == 4) && pairs == 0)
+        // regular straight
+        if ( (max - min == 4) && (pairs == 0) && (straightToTheAce == false) )
         {
             straight = true
             pairs = 0
+            highPair = false
             set = false
-            flush = false
-            fourKind = false
         }
         
-        // spades
-        if (suit1 == "spade" && suit2 == "spade" && suit3 == "spade" && suit4 == "spade" && suit5 == "spade" && straight == false)
+        // spades flush
+        if (suit1 == "spade" && suit2 == "spade" && suit3 == "spade" && suit4 == "spade" && suit5 == "spade")
         {
-            flush = true
-            pairs = 0
-            highPair = false
-            set = false
-            straight = false
-            fullhouse = false
-            fourKind = false
+            if (straight == false)
+            {
+                flush = true
+                pairs = 0
+                highPair = false
+                set = false
+            }
+            // straight flush
+            else if (straight == true && straightToTheAce == false)
+            {
+                straightFlush = true
+                pairs = 0
+                highPair = false
+                set = false
+                straight = false
+            }
+            // royal flush
+            else if (straight == true && straightToTheAce == true)
+            {
+                royalFlush = true
+                pairs = 0
+                highPair = false
+                set = false
+                straight = false
+                straightToTheAce = false
+            }
+            
         }
-        // straight flush
-        if (suit1 == "spade" && suit2 == "spade" && suit3 == "spade" && suit4 == "spade" && suit5 == "spade" && straight == true)
+        
+        // clubs flush
+        if (suit1 == "club" && suit2 == "club" && suit3 == "club" && suit4 == "club" && suit5 == "club")
         {
-            straightFlush = true
-            pairs = 0
-            highPair = false
-            set = false
-            set = false
-            straight = false
-            flush = false
-            fullhouse = false
-            fourKind = false
-            royalFlush = false
+            if (straight == false)
+            {
+                flush = true
+                pairs = 0
+                highPair = false
+                set = false
+            }
+            // straight flush
+            else if (straight == true && straightToTheAce == false)
+            {
+                straightFlush = true
+                pairs = 0
+                highPair = false
+                set = false
+                straight = false
+            }
+            // royal flush
+            else if (straight == true && straightToTheAce == true)
+            {
+                royalFlush = true
+                pairs = 0
+                highPair = false
+                set = false
+                straight = false
+                straightToTheAce = false
+            }
         }
-        // clubs
-        if (suit1 == "club" && suit2 == "club" && suit3 == "club" && suit4 == "club" && suit5 == "club" && straight == false)
-        {
-            flush = true
-            pairs = 0
-            highPair = false
-            set = false
-            straight = false
-            fullhouse = false
-            fourKind = false
-        }
-        if (suit1 == "club" && suit2 == "club" && suit3 == "club" && suit4 == "club" && suit5 == "club" && straight == true)
-        {
-            straightFlush = true
-            pairs = 0
-            highPair = false
-            set = false
-            set = false
-            straight = false
-            flush = false
-            fullhouse = false
-            fourKind = false
-            royalFlush = false
-        }
+
         // diamonds
-        if (suit1 == "diamond" && suit2 == "diamond" && suit3 == "diamond" && suit4 == "diamond" && suit5 == "diamond" && straight == false)
+        if (suit1 == "diamond" && suit2 == "diamond" && suit3 == "diamond" && suit4 == "diamond" && suit5 == "diamond")
         {
-            flush = true
-            pairs = 0
-            highPair = false
-            set = false
-            straight = false
-            fullhouse = false
-            fourKind = false
+            if (straight == false)
+            {
+                flush = true
+                pairs = 0
+                highPair = false
+                set = false
+            }
+            // straight flush
+            else if (straight == true && straightToTheAce == false)
+            {
+                straightFlush = true
+                pairs = 0
+                highPair = false
+                set = false
+                straight = false
+            }
+            // royal flush
+            else if (straight == true && straightToTheAce == true)
+            {
+                royalFlush = true
+                pairs = 0
+                highPair = false
+                set = false
+                straight = false
+                straightToTheAce = false
+            }
         }
-        if (suit1 == "diamond" && suit2 == "diamond" && suit3 == "diamond" && suit4 == "diamond" && suit5 == "diamond" && straight == true)
-        {
-            straightFlush = true
-            pairs = 0
-            highPair = false
-            set = false
-            set = false
-            straight = false
-            flush = false
-            fullhouse = false
-            fourKind = false
-            royalFlush = false
-        }
+        
         // hearts
-        if (suit1 == "heart" && suit2 == "heart" && suit3 == "heart" && suit4 == "heart" && suit5 == "heart" && straight == false)
+        if (suit1 == "heart" && suit2 == "heart" && suit3 == "heart" && suit4 == "heart" && suit5 == "heart")
         {
-            flush = true
-            pairs = 0
-            highPair = false
-            set = false
-            straight = false
-            fullhouse = false
-            fourKind = false
-        }
-        if (suit1 == "heart" && suit2 == "heart" && suit3 == "heart" && suit4 == "heart" && suit5 == "heart" && straight == true)
-        {
-            straightFlush = true
-            pairs = 0
-            highPair = false
-            set = false
-            set = false
-            straight = false
-            flush = false
-            fullhouse = false
-            fourKind = false
-            royalFlush = false
+            if (straight == false)
+            {
+                flush = true
+                pairs = 0
+                highPair = false
+                set = false
+            }
+            // straight flush
+            else if (straight == true && straightToTheAce == false)
+            {
+                straightFlush = true
+                pairs = 0
+                highPair = false
+                set = false
+                straight = false
+            }
+            // royal flush
+            else if (straight == true && straightToTheAce == true)
+            {
+                royalFlush = true
+                pairs = 0
+                highPair = false
+                set = false
+                straight = false
+                straightToTheAce = false
+            }
         }
         
         // MARK: Full House
@@ -598,12 +610,12 @@ class Dealer: ObservableObject
         {
             fullhouse = true
             pairs = 0
-            lowPair = false
             highPair = false
             set = false
             straight = false
+            straightToTheAce = false
             flush = false
-            fourKind = false
+            straightFlush = false
             royalFlush = false
         }
         
@@ -612,27 +624,15 @@ class Dealer: ObservableObject
         {
             fourKind = true
             pairs = 0
-            lowPair = false
             highPair = false
             set = false
-            set = false
             straight = false
+            straightToTheAce = false
             flush = false
+            straightFlush = false
             fullhouse = false
             royalFlush = false
         }
-        
-        
-        
-        //MARK: Royal Flush
-        if (straightFlush == true && aces == 1)
-        {
-            royalFlush = true
-            straightFlush = false
-        }
-        
-        
-        
         
         // MARK: Payout & Statement Indicator
         if (firstDeal == true)
@@ -658,7 +658,7 @@ class Dealer: ObservableObject
                 winnings += 15
                 playerWonHand = true
             }
-            if (straight == true)
+            if (straight == true || straightToTheAce == true)
             {
                 statement = "STRAIGHT"
                 credits += 20

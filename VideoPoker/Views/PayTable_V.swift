@@ -27,7 +27,7 @@ struct PayTable: View
                 Text("TWO PAIR")
                 Text("JACKS OR BETTER")
             }
-            .padding(.trailing, 10.0)
+            .padding(.leading, 5.0)
             .scaledToFill()
             .border(Color.white, width: 2)
             // x1

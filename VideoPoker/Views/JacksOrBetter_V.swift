@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct JacksOrBetter_V: View
+struct JacksOrBetter: View
 {
     @EnvironmentObject var dealer: Dealer
     
@@ -20,18 +20,19 @@ struct JacksOrBetter_V: View
             Spacer()
             Spacer()
             CardGrid()
-            Winner(dealer: dealer)
+            Winner()
             Spacer()
-            MoneyRow(dealer: dealer)
-            Buttons(dealer: dealer)
+            MoneyRow()
+            Buttons()
         }
+        .padding(.horizontal)
     }
 }
 
 struct JacksOrBetter_V_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            JacksOrBetter_V()
+            JacksOrBetter()
         }
     }
 }

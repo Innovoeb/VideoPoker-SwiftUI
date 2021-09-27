@@ -9,39 +9,41 @@ import SwiftUI
 
 struct MoneyRow: View
 {
-    @ObservedObject var dealer: Dealer
+    @EnvironmentObject var dealer: Dealer
     
     
     var body: some View
     {
-        HStack (alignment: .center)
+        HStack ()
         {
             if (dealer.gameInit == false)
             {
                 Text("WIN 4000")
-                    .frame(alignment: .leading)
+                Spacer()
             }
             else
             {
                 if (dealer.playerWonHand == true)
                 {
                     Text("WIN \(dealer.winnings)")
-                        .frame(alignment: .leading)
+                    Spacer()
+                    Spacer()
                 }
                 else
                 {
                     Text("")
-                        .frame(alignment: .leading)
+                    Spacer()
+                    Spacer()
                 }
             }
-            
-            Spacer()
+            //Spacer()
+            //Spacer()
             Text("BET 5")
-                .frame(alignment: .center)
+                //.frame(alignment: .center)
             Spacer()
             Text("CREDIT \(dealer.credits)")
-                .frame(alignment: .trailing)
+                //.frame(alignment: .trailing)
         }
-        .frame(width: 370.0, height: 50.0)
+        .frame(height: 50.0)
     }
 }
